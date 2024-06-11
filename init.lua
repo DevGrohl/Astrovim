@@ -15,5 +15,17 @@ if not pcall(require, "lazy") then
   vim.cmd.quit()
 end
 
+if pcall(require, "codium-vim") then
+  vim.g.codeium_enabled = true
+  vim.g.codeium_manual = true
+end
+--vim.g.codeium_disable_bindings = 1
+
+-- validate if codium is available and setup the statusline
+--if pcall(require, "codium") then
+--  vim.fn["codeium#GetStatusString"]()
+--  vim.api.nvim_call_function("codeium#GetStatusString", {})
+--end
+
 require "lazy_setup"
 require "polish"
