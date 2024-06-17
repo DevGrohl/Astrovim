@@ -67,6 +67,7 @@ return {
   },
   {
     "Exafunction/codeium.vim",
+    lazy = false,
     config = function()
       vim.keymap.set("n", "<Space>;", function() return vim.fn["CodeiumToggle"]() end, { expr = true })
       vim.keymap.set("i", "<C-y>", function() return vim.fn["codeium#Accept"]() end, { expr = true, silent = true })
