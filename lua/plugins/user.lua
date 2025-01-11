@@ -1,5 +1,6 @@
 ---@type LazySpec
 return {
+  -- Discord presence
   "andweeb/presence.nvim",
   {
     "ray-x/lsp_signature.nvim",
@@ -10,20 +11,17 @@ return {
     "goolord/alpha-nvim",
     opts = function(_, opts)
       opts.section.header.val = {
-        "⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⣀⣤⣴⣶⣾⣿⣿⣿⣶⣶⣦⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
-        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
-        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀",
-        "⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀",
-        "⠀⠀⠀⠀⠀⠀⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀",
-        "⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⢿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀ ",
-        "⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣻⣿⣿⣿⡟⠁⠀⠀⠀⠈⢻⣿⣿⣿⠀⠀⠀⠀⠀⠀ ",
-        "⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⠛⠛⠛⠛⠛⠛⢛⣿⣮⣿⣿⣿⠀⠀⠀⠀⠀⠀⢈⣿⣿⡟⠀⠀⠀⠀⠀⠀ ",
-        "⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⣧⡀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣧⡀⠀⠀⠀⢀⣼⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀",
-        "⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣶⣿⣿⣿⣿⠟⠉⠻⣿⣿⣿⣿⣶⣿⣿⣿⣿⣷⠀⠀⠀⠀⠀⠀⠀⠀",
-        "⠀⠀⠀⠀⠀⠀⠀⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⡇⣠⣷⡀⢹⣿⣿⣿⣿⣿⣿⣿⣿⡿⠀⠀⠀⠀⠀⠀⠀⠀",
-        "⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀",
-        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
-        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠋⠛⠋⠛⠙⠛⠙⠛⠙⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+        "      _______                                    ",
+        "____ |      /____ ____ ___  ____ ___/\\    __     ",
+        "\\_  \\|     /_   /     \\   \\/   /___/  \\  /  \\    ",
+        " /   \\    / /  /_  \\   \\  /   /   /    \\/    \\   ",
+        "/   \\    /    / / _/   /\\    /   /       /    \\  ",
+        "\\____\\  /\\_____/\\_____/  \\__/___/______\\/      \\ ",
+        "      \\/                                \\______/ ",
+        "                                                 ",
+        "______/\\  __________________/\\     n e o v i m   ",
+        "        \\/  d e v g r o h l   \\  _______________ ",
+        "                               \\/                "
       }
       return opts
     end,
@@ -66,24 +64,77 @@ return {
     end,
   },
   {
-    "Exafunction/codeium.vim",
+    "JunaidQrysh/chameleon.nvim",
+    dependencies = { "nvzone/volt" },
+    event = "VeryLazy",
+  },
+  {
+    "eldritch-theme/eldritch.nvim",
     lazy = false,
+    priority = 1000,
+    opts = {},
+  },
+  {
+    "theamallalgi/zitchdog",
+    lazy = false,
+    priority = 1000,
+  },
+  {
+    "ficcdaf/ashen.nvim",
+    lazy = false,
+    priority = 1000,
+  },
+  -- Stylish Markdown
+  {
+    "XY2DEV/markview.nvim",
+    lazy = false, -- Recommended
+    -- ft = "markdown" -- If you decide to lazy-load anyway
+
+    dependencies = {
+      -- You will not need this if you installed the
+      -- parsers manually
+      -- Or if the parsers are in your $RUNTIMEPATH
+      "nvim-treesitter/nvim-treesitter",
+
+      "nvim-tree/nvim-web-devicons",
+    },
+  },
+  -- LSP warnings under the line of code
+  {
+    "Maan2003/lsp_lines.nvim",
+    lazy = false,
+  },
+  -- Breadcumbs between tabs and editor
+  {
+    "utilyre/barbecue.nvim",
+    name = "barbecue",
+    version = "*",
+    dependencies = {
+      "SmiteshP/nvim-navic",
+      "nvim-tree/nvim-web-devicons", -- optional dependency
+    },
+    opts = {
+      -- configurations go here
+    },
     config = function()
-      vim.keymap.set("n", "<Space>;", function() return vim.fn["CodeiumToggle"]() end, { expr = true })
-      vim.keymap.set("i", "<C-y>", function() return vim.fn["codeium#Accept"]() end, { expr = true, silent = true })
-      vim.keymap.set(
-        "i",
-        "<C-n>",
-        function() return vim.fn["codeium#CycleCompletions"](1) end,
-        { expr = true, silent = true }
-      )
-      vim.keymap.set(
-        "i",
-        "<C-b>",
-        function() return vim.fn["codeium#CycleCompletions"](-1) end,
-        { expr = true, silent = true }
-      )
-      vim.keymap.set("i", "<C-x>", function() return vim.fn["codeium#Clear"]() end, { expr = true, silent = true })
+      require("barbecue").setup({
+        create_autocmd = false, -- prevent barbecue from updating itself automatically
+      })
+
+      vim.api.nvim_create_autocmd({
+        "WinScrolled", -- or WinResized on NVIM-v0.9 and higher
+        "BufWinEnter",
+        "CursorHold",
+        "InsertLeave",
+
+        -- include this if you have set `show_modified` to `true`
+        -- "BufModifiedSet",
+      }, {
+          group = vim.api.nvim_create_augroup("barbecue.updater", {}),
+          callback = function()
+            require("barbecue.ui").update()
+          end,
+        })
     end,
   },
 }
