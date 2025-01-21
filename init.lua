@@ -13,6 +13,8 @@ vim.opt.rtp:prepend(lazypath)
 
 local lazy_config = require "configs.lazy"
 
+ vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46_cache/"
+
 -- load plugins
 require("lazy").setup({
   {
@@ -25,9 +27,9 @@ require("lazy").setup({
   { import = "plugins" },
 }, lazy_config)
 
--- load theme
-dofile(vim.g.base46_cache .. "defaults")
-dofile(vim.g.base46_cache .. "statusline")
+for _, v in ipairs(vim.fn.readdir(vim.g.base46_cache)) do
+  dofile(vim.g.base46_cache .. v)
+end
 
 require "options"
 require "nvchad.autocmds"
