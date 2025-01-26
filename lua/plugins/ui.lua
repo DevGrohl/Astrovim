@@ -52,28 +52,6 @@ return {
       return {}
     end,
   },
-  -- {
-  --   "goolord/alpha-nvim",
-  --   keys = {
-  --     { "<leader>ua", function() require("alpha").start() end, desc = "Home screen" },
-  --   },
-  --   opts = function(_, opts)
-  --     opts.section.header.val = {
-  --       "      _______                                    ",
-  --       "____ |      /____ ____ ___  ____ ___/\\    __     ",
-  --       "\\_  \\|     /_   /     \\   \\/   /___/  \\  /  \\    ",
-  --       " /   \\    / /  /_  \\   \\  /   /   /    \\/    \\   ",
-  --       "/   \\    /    / / _/   /\\    /   /       /    \\  ",
-  --       "\\____\\  /\\_____/\\_____/  \\__/___/______\\/      \\ ",
-  --       "      \\/                                \\______/ ",
-  --       "                                                 ",
-  --       "______/\\  __________________/\\     n e o v i m   ",
-  --       "        \\/  d e v g r o h l   \\  _______________ ",
-  --       "                               \\/                "
-  --     }
-  --     return opts
-  --   end,
-  -- },
   {
     "mbbill/undotree",
     keys = {
@@ -175,17 +153,5 @@ return {
           end,
         })
     end,
-  },
-  {
-    "JunaidQrysh/chameleon.nvim",
-    dependencies = { "nvzone/volt" },
-    event = "VeryLazy",
-    opts = {
-      ui = {
-        statusline = {
-          enabled = true
-        }
-      }
-    }
   },
 }
