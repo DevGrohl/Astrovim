@@ -1,12 +1,12 @@
 local options = {
   formatters_by_ft = {
+    go = { "gofmt", "goimports" },
     lua = { "stylua" },
-    -- css = { "prettier" },
-    -- html = { "prettier" },
+    python = {"black"},
+    rust = { "ast-grep", lsp_format = "fallback" },
   },
 
   fomat_on_save = {
-  --   -- These options will be passed to conform.format()
     timeout_ms = 500,
     lsp_fallback = true,
   },
