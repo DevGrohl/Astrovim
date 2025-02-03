@@ -1,3 +1,20 @@
+local setup_plugin = function(name, opts, callback, execute_callback_before_setup)
+	local status_ok, plugin = pcall(require, name)
+	if plugin then
+		if callback then
+			if execute_callback_before_setup then
+				callback(plugin)
+			end
+			plugin.setup(opts)
+			if not execute_callback_before_setup then
+				callback(plugin)
+			end
+		else
+			plugin.setup(opts)
+		end
+	end
+end
+
 return {
   {
     "cshuaimin/ssr.nvim",
@@ -90,4 +107,12 @@ return {
       vim.diagnostic.config({ virtual_text = false })
     end
   },
+  { 'lewis6991/gitsigns.nvim' },
+  -- {
+  --   'kevinhwang91/nvim-ufo',
+  --   dependencies = { { "kevinhwang91/promise-async", lazy = true } },
+  --   opts = function()
+  --     return require "configs.nvim-ufo"
+  --   end,
+  -- }
 }
